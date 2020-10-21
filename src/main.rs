@@ -21,17 +21,17 @@ fn main() {
         let guess: u32 = guess
             .trim()
             .parse()
-            .expect("Please type a positive integer!"); //数値を入力してください！
+            .expect("Please type a positive integer!");
 
         println!("You guessed: {}", guess);
         match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small!"),  //小さすぎ！
-            Ordering::Greater => println!("Too big!"), //大きすぎ！
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
                 println!("You win!");
                 println!("you can find numbers in {} times!",counter);
                 break;
-            },                  //やったね！
+            },
         }
     }
 }
