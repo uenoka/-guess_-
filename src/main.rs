@@ -7,7 +7,7 @@ fn main() {
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1, 101);
-    const test = 23;
+
     let mut counter = 0;
     loop {
         counter += 1;
@@ -29,9 +29,9 @@ fn main() {
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
                 println!("You win!");
-                println!("you can find numbers in {} times!",counter);
+                println!("you can find numbers in {} times!", counter);
                 break;
-            },
+            }
         }
     }
 }
